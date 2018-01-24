@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  jupyter:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ports:
+      - 8888:8888
+    volumes:
+      - ../jupyterNotebook:/notebook
+    environment:
+      - GRANT_SUDO="yes"
+    working_dir: /notebook

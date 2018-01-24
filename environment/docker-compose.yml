@@ -1,0 +1,46 @@
+version: "2"
+services:
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=S4_2018
+      - MYSQL_PASSWORD=S4_2018
+      - MYSQL_USER=S4_2018
+      - PMA_HOST=twitter_db
+    ports:
+      - 8080:80
+    depends_on:
+      - twitter_db
+    links:
+      - twitter_db:mysql
+  twitter-app:
+    container_name: "web-app"
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    environment:
+        - MYSQL_DB_HOST=twitter_db
+        - MYSQL_ROOT_PASSWORD=S4_2018
+        - MYSQL_DATABASE=S4_2018
+        - MYSQL_USER=S4_2018
+    volumes:
+      - ./python-code:/twitter/
+    ports:
+      - 8888:8888
+    depends_on:
+      - twitter_db
+    links:
+      - twitter_db:mysql
+  twitter_db:
+    image: mysql:5.6
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=S4_2018
+      - MYSQL_DATABASE=S4_2018
+      - MYSQL_PASSWORD=S4_2018
+      - MYSQL_USER=S4_2018
+    volumes:
+      - ./db:/var/lib/mysql/
+    ports:
+      - 3306:3306
