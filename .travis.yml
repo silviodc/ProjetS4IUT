@@ -5,4 +5,4 @@ cache:
   - ./environment/
 python: 3.6
 install:
-  - ./environment/python-code/
+  - ./environment/python-code/app.py
