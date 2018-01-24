@@ -13,10 +13,8 @@ RUN pip install --trusted-host pypi.python.org -r requirements.txt
 EXPOSE 80
 
 # Set the working directory to /twitter
+RUN mkdir /twitter
 WORKDIR /twitter
-
-# Copy the current directory contents into the container at /app
-ADD ./python-code /twitter
 
 # Define environment variable
 ENV MYSQL_DB_HOST MYSQL_ROOT_PASSWORD MYSQL_DATABASE MYSQL_USER

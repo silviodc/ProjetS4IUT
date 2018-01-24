@@ -25,7 +25,7 @@ services:
         - MYSQL_DATABASE=S4_2018
         - MYSQL_USER=S4_2018
     volumes:
-      - ./python-code:/twitter/
+      - ./python-code/:/twitter/
     ports:
       - 8888:8888
     depends_on:
