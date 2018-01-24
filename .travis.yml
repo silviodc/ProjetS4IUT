@@ -1,8 +1,7 @@
+before_script: cd ./environment/
 language: python
 cache:
   pip: true
-  directories:
-  - ./environment/
 python: 3.6
 install:
-  - ./environment/python-code/app.py
+  - ./python-code/app
