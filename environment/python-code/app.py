@@ -19,10 +19,8 @@ def hello():
         coon.close()
         return html.format(name="FAILED!", hostname=e)
     menssage = "connection failed"
-    if(coon)
-        message = "connection to mysql successful"
     conn.close()
-    return html.format(name=os.getenv("MYSQL_USER", "failed"), hostname=menssage)
+    return html.format(name=os.getenv("MYSQL_USER", "failed"), hostname="connection to mysql successful")
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=8888)
