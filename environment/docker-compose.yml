@@ -27,7 +27,7 @@ services:
     volumes:
       - ./python-code/:/twitter/
     ports:
-      - 8888:8888
+      - 8899:8888
     depends_on:
       - twitter_db
     links:
