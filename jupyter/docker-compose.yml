@@ -4,7 +4,7 @@ services:
   jupyter:
     build:
       context: .
-      dockerfile: docker/Dockerfile
+      dockerfile: ./Dockerfile
       args:
          - http_proxy
          - https_proxy
@@ -12,7 +12,7 @@ services:
     ports:
       - 8888:8888
     volumes:
-      - ../jupyterNotebook:/notebook
+      - ./jupyterNotebook:/home/jovyan/work/
     environment:
       - GRANT_SUDO="yes"
     working_dir: /notebook

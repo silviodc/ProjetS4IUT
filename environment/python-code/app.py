@@ -29,4 +29,4 @@ def hello():
     return html.format(name=os.getenv("MYSQL_USER", "failed"), hostname=message)
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=8888)
+    app.run(host='0.0.0.0', port=8899)

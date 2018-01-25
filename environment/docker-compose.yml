@@ -23,19 +23,19 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
-        environment:
-          - MYSQL_DB_HOST=twitter_db
-          - MYSQL_ROOT_PASSWORD=S4_2018
-          - MYSQL_DATABASE=S4_2018
-          - MYSQL_USER=S4_2018
-        args:
-           - http_proxy
-           - https_proxy
-           - no_proxy
+    environment:
+      - MYSQL_DB_HOST=twitter_db
+      - MYSQL_ROOT_PASSWORD=S4_2018
+      - MYSQL_DATABASE=S4_2018
+      - MYSQL_USER=S4_2018
+    args:
+      - http_proxy
+      - https_proxy
+      - no_proxy
     volumes:
       - ./python-code/:/twitter/
     ports:
-      - 8899:8888
+      - 8899:8899
     depends_on:
       - twitter_db
     links:
