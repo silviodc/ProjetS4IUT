@@ -6,7 +6,7 @@ Run the command:
 
 
 ```docker
-docker run -p 3306:3306 --name myserver -e MYSQL_ROOT_PASSWORD=S4_2018 -e MYSQL_DATABASE=S4_2018 mysql:latest
+docker run -p 3306:3306 --name myserver -e MYSQL_ROOT_PASSWORD=S4_2018 -e MYSQL_DATABASE=S4_2018 -d mysql:latest
 ```
 
 ```docker
