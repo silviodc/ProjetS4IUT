@@ -1,10 +1,20 @@
-version: '2'
+version: '3'
 
 services:
   apache:
-    image: 'bitnami/apache:latest'
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      args:
+         - http_proxy
+         - https_proxy
+         - no_proxy
     ports:
       - '80:80'
       - '443:443'
     volumes:
       - ./code/:/app
+    args:
+       - http_proxy
+       - https_proxy
+       - no_proxy

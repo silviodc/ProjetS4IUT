@@ -1,7 +1,0 @@
-before_script: cd ./environment/
-language: python
-cache:
-  pip: true
-python: 3.6
-install:
-  - ./python-code/app
