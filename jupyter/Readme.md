@@ -1,6 +1,20 @@
 # Install
 
-## At IUT-ORSAY
+
+## At IUT-ORSAY Salle RDC
+
+Run the command:
+
+```docker
+docker build -t jupyternotebook .
+```
+Wait until the image be ready
+
+```docker
+docker run --name "myContainerJupyter" -p 8888:8888 -e GRANT_SUDO="yes" -v $PWD/notebook:/home/jovyan/work/ -it jupyternotebook
+```
+
+## At IUT-ORSAY Salle Réseaux
 
 Run the command:
 
@@ -13,10 +27,16 @@ Wait until the image be ready
 docker run --name "myContainerJupyter" -p 8888:8888 -e GRANT_SUDO="yes" -v $PWD/notebook:/home/jovyan/work/ -it jupyternotebook
 ```
 
-## At home
+## At home ou IUT-ORSAY Salle RDC
 
 ```docker
 docker-compose up
+```
+
+## AT IUT-ORSAY Salle Réseaux
+
+```docker
+./runCompose.sh
 ```
 
 ## Access the server

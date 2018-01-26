@@ -1,6 +1,19 @@
 # Install
 
-## At IUT-ORSAY
+## At IUT-ORSAY Salle RDC
+
+Run the command:
+
+```docker
+docker build -t apacheserver .
+```
+Wait until the image be ready
+
+```docker
+docker run --name "myContainerApache" -p 8889:80 -p 8443:443 -v $PWD/code:/app/ -it apacheserver
+```
+
+## At IUT-ORSAY Salle Réseaux
 
 Run the command:
 
@@ -10,13 +23,19 @@ docker build --build-arg http_proxy=http://proxy.iut-orsay.fr:3128 --build-arg h
 Wait until the image be ready
 
 ```docker
-docker run --name "myContainerApache" -p 8889:80 -p 443:443 -v $PWD/code:/app/ -it apacheserver
+docker run --name "myContainerApache" -p 8889:80 -p 8443:443 -v $PWD/code:/app/ -it apacheserver
 ```
 
-## At home
+## At home ou IUT-ORSAY Salle RDC
 
 ```docker
 docker-compose up
+```
+
+## IUT-ORSAY Salle Réseaux
+
+```docker
+./runCompose.sh
 ```
 
 ## Access the server
