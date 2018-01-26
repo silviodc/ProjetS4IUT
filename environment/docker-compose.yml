@@ -3,10 +3,6 @@ services:
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     restart: always
-    args:
-        - http_proxy
-        - https_proxy
-        - no_proxy
     environment:
       - MYSQL_ROOT_PASSWORD=S4_2018
       - MYSQL_PASSWORD=S4_2018
@@ -23,12 +19,7 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
-    environment:
-      - MYSQL_DB_HOST=twitter_db
-      - MYSQL_ROOT_PASSWORD=S4_2018
-      - MYSQL_DATABASE=S4_2018
-      - MYSQL_USER=S4_2018
-    args:
+      args:
       - http_proxy
       - https_proxy
       - no_proxy
@@ -36,6 +27,12 @@ services:
       - ./python-code/:/twitter/
     ports:
       - 8899:8899
+    environment:
+      - MYSQL_DB_HOST=twitter_db
+      - MYSQL_ROOT_PASSWORD=S4_2018
+      - MYSQL_DATABASE=S4_2018
+      - MYSQL_USER=S4_2018
+
     depends_on:
       - twitter_db
     links:
@@ -52,7 +49,3 @@ services:
       - ./db:/var/lib/mysql/
     ports:
       - 3306:3306
-    args:
-       - http_proxy
-       - https_proxy
-       - no_proxy
