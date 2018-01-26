@@ -12,6 +12,8 @@ RUN export http_proxy=$http_proxy \
 
 USER root
 
+COPY ./requirements.txt ./requirements.txt
+
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         unzip \
@@ -20,11 +22,11 @@ RUN apt-get update \
 		    libmysqlclient-dev \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
-    && chown 1000 -R /home/jovyan/work
+    && chown 1000 -R /home/jovyan/work \
+    && chown jovyan ./requirements.txt
 
 USER jovyan
 
-COPY ./requirements.txt ./requirements.txt
 
 RUN pip install -r requirements.txt
 
