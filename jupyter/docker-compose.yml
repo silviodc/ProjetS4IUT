@@ -12,7 +12,6 @@ services:
     ports:
       - 8888:8888
     volumes:
-      - ./jupyterNotebook:/home/jovyan/work/
+      - ./notebook:/home/jovyan/work/
     environment:
       - GRANT_SUDO="yes"
-    working_dir: /notebook

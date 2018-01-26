@@ -5,7 +5,7 @@
 Run the command:
 
 ```docker
-docker build --build-arg http_proxy=http://proxy.iut-orsay.fr:3128 --build-arg https_proxy=http://proxy.iut-orsay.fr:3128 -t apacheserver .
+docker build --build-arg http_proxy=http://proxy.iut-orsay.fr:3128 --build-arg https_proxy=https://proxy.iut-orsay.fr:3128 -t apacheserver .
 ```
 Wait until the image be ready
 
@@ -21,7 +21,7 @@ docker-compose up
 
 ## Access the server
 
-Go to: http://localhost:80
+Go to: http://localhost:8889
 
 ## Modify the files
 

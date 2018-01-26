@@ -32,7 +32,6 @@ services:
       - MYSQL_ROOT_PASSWORD=S4_2018
       - MYSQL_DATABASE=S4_2018
       - MYSQL_USER=S4_2018
-
     depends_on:
       - twitter_db
     links:
