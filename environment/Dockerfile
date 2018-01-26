@@ -12,6 +12,10 @@ RUN export http_proxy=$http_proxy \
   && export https_proxy=$https_proxy \
   && export no_proxy=$no_proxy
 
+RUN echo http_proxy
+
+RUN echo https_proxy
+
 # Install any needed packages specified in requirements.txt
 RUN apt-get update
 RUN apt-get install -y python-pip python-dev libmysqlclient-dev

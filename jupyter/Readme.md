@@ -5,12 +5,12 @@
 Run the command:
 
 ```docker
-docker build -t jupyternotebook .
+docker build --build-arg http_proxy=http://proxy.iut-orsay.fr:3128 --build-arg https_proxy=http://proxy.iut-orsay.fr:3128 -t jupyternotebook .
 ```
 Wait until the image be ready
 
 ```docker
-docker run --name "myContainerJupyter" -p 8888:8888 -v $PWD/notebook:/home/jovyan/work/ -it jupyternotebook
+docker run --name "myContainerJupyter" -p 8888:8888 -e GRANT_SUDO="yes" -v $PWD/notebook:/home/jovyan/work/ -it jupyternotebook
 ```
 
 ## At home

@@ -14,7 +14,7 @@ docker run --name myadmin -e MYSQL_ROOT_PASSWORD=S4_2018 -e MYSQL_PASSWORD=S4_20
 ```
 
 ```docker
-docker build -t twitterapp .
+docker build --build-arg http_proxy=http://proxy.iut-orsay.fr:3128 --build-arg https_proxy=http://proxy.iut-orsay.fr:3128 -t twitterapp .
 ```
 Wait until the image be ready
 
