@@ -1,0 +1,39 @@
+#PLANNING 
+
+-Séance 1 : Découverte du sujet. 
+            Explications sur les technologies étudiées en auto formation
+            Election d'un chef de projet et de l'adjoint
+            Brainstorming
+             
+
+-Séance 2 : Explications sur les technologies étudiées en auto formation. 
+            Point sur le brainstorming
+            Répartition des tâches dans des groupes
+            Etude des données disponibles / Identification des utilisateurs
+            Début rédaction des document décrivant les données et les utilisateurs
+
+-Séance 3 : Définition des fonctionnalités et du périmètre technique avec l’estimation du temps nécessaire pour l’implementation de chaque fonctionnalité. Rédaction du cahier des charges fonctionnel et technique. Storyboard - réflexion sur la visualisation d’informations statistiques.
+
+-Séance 4 : Cahier des charges fonctionnel et techniques (suite). Prise en main de NLTK, développements tests
+
+-Séance 5 : Cahier des charges fonctionnel et techniques (suite). Prise en main de D3, développements tests
+
+-Séance 6 :  Début du développement back et front en parallèle - Déploiement Git  - installation Docker
+
+-Séance 7 :  Recuperation des données et affichage sommaire dans les templates front-end
+
+-Séance 8 : Presentation intermédiaire
+
+-Séance 9 : Développement / rédaction des documents
+
+-Séance 10 : Développement / rédaction des documents
+
+-Séance 11 :  Développement / rédaction des documents
+
+-Séance 12 : Développement / rédaction des documents
+
+-Séance 13 : Version beta de l’application - bilan de ce qui reste à améliorer
+
+-Séance 14 - 15 : Amelioration et finalisation de l’appli et des documents
+
+-Séance 16 : Presentation finale
