@@ -6,9 +6,9 @@ services:
       context: .
       dockerfile: ./Dockerfile
       args:
-         - http_proxy
-         - https_proxy
-         - no_proxy
+      - http_proxy
+      - https_proxy
+      - no_proxy
     ports:
       - '8889:80'
       - '8443:443'
